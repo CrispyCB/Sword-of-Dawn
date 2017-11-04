@@ -21,6 +21,7 @@ namespace Sword_of_Dawn
                 Console.WriteLine("Welcome to Sword of Dawn, a simple text-based RPG.");
                 Console.WriteLine("\r\n");
                 NameCharacter();
+                FirstSteps();
             }
 
             //Asks the player for their character name(s) and saves it/them.
@@ -49,12 +50,10 @@ namespace Sword_of_Dawn
                         case "Altdorf":
                             Console.WriteLine("The city of merchants. So tell me: are you a merchant?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         case "Averland":
                             Console.WriteLine("The city of farmers. So tell me: are you a farmer?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         case "Middenheim":
                             Console.WriteLine("The city of knights. So tell me: are you a knight?");
@@ -64,18 +63,26 @@ namespace Sword_of_Dawn
                         case "Mordheim":
                             Console.WriteLine("The city of adventurers. So tell me: are you an adventurer?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         case "Nuln":
                             Console.WriteLine("The city of soldiers. So tell me: are you a soldier?");
-                            Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         default:
                             Console.WriteLine("That's not a real city! Pick another one.");
                             break;
+
+                            }
+                    //if-else statement for deciding player class. Takes input from Console.ReadLine() and converts it to string, then compares that string against predetermined results.
+                    string Profession = Console.ReadLine();
+                    if (Profession.Equals("Yes"))
+                    {
+                        Console.WriteLine("Excellent! Let's begin!");
                     }
-                   
+                    else if (Profession.Equals("No"))
+                    {
+                        Console.WriteLine("Pick another one!");
+                    }
+
                 }
                 else if ((results.KeyChar == 'N') || (results.KeyChar == 'n'))
                 {
@@ -96,12 +103,10 @@ namespace Sword_of_Dawn
                         case "Altdorf":
                             Console.WriteLine("The city of merchants. So tell me: are you a merchant?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         case "Averland":
                             Console.WriteLine("The city of farmers. So tell me: are you a farmer?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         case "Middenheim":
                             Console.WriteLine("The city of knights. So tell me: are you a knight?");
@@ -111,24 +116,37 @@ namespace Sword_of_Dawn
                         case "Mordheim":
                             Console.WriteLine("The city of adventurers. So tell me: are you an adventurer?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         case "Nuln":
                             Console.WriteLine("The city of soldiers. So tell me: are you a soldier?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         default:
                             Console.WriteLine("That's not a real city! Pick another one.");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
+                    }
+                    //if-else statement for deciding player class. Takes input from Console.ReadLine().
+                    string Profession = Console.ReadLine();
+                    if (Profession.Equals("Yes"))
+                    {
+                        Console.WriteLine("Excellent! Let's begin!");
+                    }
+                    else if (Profession.Equals("No"))
+                    {
+                        Console.WriteLine("Pick another one!");
                     }
 
 
                 }
 
 
+            }
+
+            public static void FirstSteps()
+            {
+                //savepoint for code test. need to develop first steps based on profession chosen in NameCharacter().
+                Console.ReadLine();
             }
             class Items
             {
