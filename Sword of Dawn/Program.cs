@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -148,6 +149,7 @@ namespace Sword_of_Dawn
                 //savepoint for code test. need to develop first steps based on profession chosen in NameCharacter().
                 Console.ReadLine();
             }
+
             class Items
             {
 
@@ -159,6 +161,39 @@ namespace Sword_of_Dawn
                     Game.StartGame();
                 }
             }
+            
         }
     }
+
+}
+public class City
+{
+    public City()
+    {
+
+    }
+    public string CityName { get; set; }
+
+    public Profession Profession { get; set; }
+
+
+}
+public class Profession
+{
+    public Profession()
+    {
+
+    }
+    public string ProfessionName { get; set; }
+
+    public ICollection<City> City { get; set; }
+}
+public class CityProfessionsContext : DbContext
+{
+    public CityProfessionsContext() : base()
+    {
+
+    }
+    public DbSet<City> City { get; set; }
+    public DbSet<Profession> Profession { get; set; }
 }
