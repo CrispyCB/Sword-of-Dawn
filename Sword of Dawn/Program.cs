@@ -9,9 +9,12 @@ namespace Sword_of_Dawn
 {
     public class Main
     {
+        
         public static class Game
         {
-            //Declares character names.
+          
+            private static void ProfessionSwitch()
+            { }
             static string CharacterName;
             static string AnotherName;
 
@@ -59,7 +62,6 @@ namespace Sword_of_Dawn
                         case "Middenheim":
                             Console.WriteLine("The city of knights. So tell me: are you a knight?");
                             Console.WriteLine("\r\n");
-                            Console.ReadLine();
                             break;
                         case "Mordheim":
                             Console.WriteLine("The city of adventurers. So tell me: are you an adventurer?");
@@ -67,9 +69,11 @@ namespace Sword_of_Dawn
                             break;
                         case "Nuln":
                             Console.WriteLine("The city of soldiers. So tell me: are you a soldier?");
+                            Console.WriteLine("\r\n");
                             break;
                         default:
                             Console.WriteLine("That's not a real city! Pick another one.");
+                            Console.WriteLine("\r\n");
                             break;
 
                             }
@@ -166,34 +170,34 @@ namespace Sword_of_Dawn
     }
 
 }
-public class City
-{
-    public City()
-    {
+//public class City
+//{
+//    public City()
+//    {
 
-    }
-    public string CityName { get; set; }
+//    }
+//    public string CityName { get; set; }
 
-    public Profession Profession { get; set; }
+//    public Profession Profession { get; set; }
 
 
-}
-public class Profession
-{
-    public Profession()
-    {
+//}
+//public class Profession
+//{
+//    public Profession()
+//    {
 
-    }
-    public string ProfessionName { get; set; }
+//    }
+//    public string ProfessionName { get; set; }
 
-    public ICollection<City> City { get; set; }
-}
-public class CityProfessionsContext : DbContext
-{
-    public CityProfessionsContext() : base()
-    {
+//    public ICollection<City> City { get; set; }
+//}
+//public class CityProfessionsContext : DbContext
+//{
+//    public CityProfessionsContext() : base()
+//    {
 
-    }
-    public DbSet<City> City { get; set; }
-    public DbSet<Profession> Profession { get; set; }
-}
+//    }
+//    public DbSet<City> City { get; set; }
+//    public DbSet<Profession> Profession { get; set; }
+//}
