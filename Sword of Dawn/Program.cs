@@ -135,6 +135,7 @@ namespace Sword_of_Dawn
                     //if-else statement for deciding player class. Takes input from Console.ReadLine().
                     string Profession = "";
                     Profession = Console.ReadLine();
+                    
                     if (Profession.ToLower() == "Yes")
                     {
                         Console.WriteLine("Excellent! Let's begin!");
@@ -152,9 +153,7 @@ namespace Sword_of_Dawn
 
             public static void FirstSteps()
             {
-                string FirstStep;
-                switch(FirstStep)
-                { }
+                
             }
 
             class Items
