@@ -57,6 +57,30 @@ namespace Sword_of_Dawn
                         default:
                             Console.WriteLine("That's not a real city! Pick another one.");
                             Console.WriteLine("\r\n");
+                            string DefaultCity = Console.ReadLine();
+                            switch(DefaultCity)
+                            {
+                                case "Averland":
+                                    Console.WriteLine("The city of farmers. So tell me: are you a farmer?");
+                                    Console.WriteLine("\r\n");
+                                    break;
+                                case "Middenheim":
+                                    Console.WriteLine("The city of knights. So tell me: are you a knight?");
+                                    Console.WriteLine("\r\n");
+                                    break;
+                                case "Mordheim":
+                                    Console.WriteLine("The city of adventurers. So tell me: are you an adventurer?");
+                                    Console.WriteLine("\r\n");
+                                    break;
+                                case "Nuln":
+                                    Console.WriteLine("The city of soldiers. So tell me: are you a soldier?");
+                                    Console.WriteLine("\r\n");
+                                    break;
+                                default:
+                                    Console.WriteLine("The city of merchants. So tell me: are you a merchant?");
+                                    Console.WriteLine("\r\n");
+                                    break;
+                            }
                             break;
 
                     }
@@ -79,14 +103,15 @@ namespace Sword_of_Dawn
                     string CityName = Console.ReadLine();
 
                     ProfessionSwitch(CityName);
-                    
+
                     //if-else statement for deciding player class. Takes input from Console.ReadLine() and converts it to string, then compares that string against predetermined results.
-                    string Profession = Console.ReadLine();
-                    if (Profession.Equals("Yes"))
+                    string Profession = "";
+                    Profession = Console.ReadLine();
+                    if (Profession.ToLower() == "Yes")
                     {
                         Console.WriteLine("Excellent! Let's begin!");
                     }
-                    else if (Profession.Equals("No"))
+                    else if (Profession.ToLower() == "No")
                     {
                         Console.WriteLine("Pick another one!");
                     }
@@ -108,12 +133,13 @@ namespace Sword_of_Dawn
 
                     ProfessionSwitch(CityName);
                     //if-else statement for deciding player class. Takes input from Console.ReadLine().
-                    string Profession = Console.ReadLine();
-                    if (Profession.Equals("Yes"))
+                    string Profession = "";
+                    Profession = Console.ReadLine();
+                    if (Profession.ToLower() == "Yes")
                     {
                         Console.WriteLine("Excellent! Let's begin!");
                     }
-                    else if (Profession.Equals("No"))
+                    else if (Profession.ToLower() == "No")
                     {
                         Console.WriteLine("Pick another one!");
                     }
@@ -126,8 +152,9 @@ namespace Sword_of_Dawn
 
             public static void FirstSteps()
             {
-                //savepoint for code test. need to develop first steps based on profession chosen in NameCharacter().
-                Console.ReadLine();
+                string FirstStep;
+                switch(FirstStep)
+                { }
             }
 
             class Items
