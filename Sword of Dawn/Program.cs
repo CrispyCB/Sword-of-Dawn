@@ -12,9 +12,15 @@ namespace Sword_of_Dawn
         
         public class Game
         {
-          
+            //strings for character names and alternate character names in the NameCharacter() method.
             static string CharacterName;
             static string AnotherName;
+
+            static string IfMerchant;
+            static string IfFarmer;
+            static string IfKnight;
+            static string IfAdventurer;
+            static string IfSoldier;
 
             //Starts the game: prints out game title and overview.
             public static void StartGame()
@@ -37,48 +43,58 @@ namespace Sword_of_Dawn
                         case "Altdorf":
                             Console.WriteLine("The city of merchants. So tell me: are you a merchant?");
                             Console.WriteLine("\r\n");
+                            IfMerchant = Console.ReadLine().ToLower();
                             break;
                         case "Averland":
                             Console.WriteLine("The city of farmers. So tell me: are you a farmer?");
                             Console.WriteLine("\r\n");
+                            IfFarmer = Console.ReadLine().ToLower();
                             break;
                         case "Middenheim":
                             Console.WriteLine("The city of knights. So tell me: are you a knight?");
                             Console.WriteLine("\r\n");
+                            IfKnight = Console.ReadLine().ToLower();
                             break;
                         case "Mordheim":
                             Console.WriteLine("The city of adventurers. So tell me: are you an adventurer?");
                             Console.WriteLine("\r\n");
+                            IfAdventurer = Console.ReadLine().ToLower();
                             break;
                         case "Nuln":
                             Console.WriteLine("The city of soldiers. So tell me: are you a soldier?");
                             Console.WriteLine("\r\n");
+                            IfSoldier = Console.ReadLine().ToLower();
                             break;
                         default:
                             Console.WriteLine("That's not a real city! Pick another one.");
                             Console.WriteLine("\r\n");
-                            string DefaultCity = Console.ReadLine();
+                            string DefaultCity = Console.ReadLine().ToLower();
                             switch(DefaultCity)
                             {
                                 case "Averland":
                                     Console.WriteLine("The city of farmers. So tell me: are you a farmer?");
                                     Console.WriteLine("\r\n");
+                                    IfFarmer = Console.ReadLine().ToLower();
                                     break;
                                 case "Middenheim":
                                     Console.WriteLine("The city of knights. So tell me: are you a knight?");
                                     Console.WriteLine("\r\n");
+                                    IfKnight = Console.ReadLine().ToLower();
                                     break;
                                 case "Mordheim":
                                     Console.WriteLine("The city of adventurers. So tell me: are you an adventurer?");
                                     Console.WriteLine("\r\n");
+                                    IfKnight = Console.ReadLine().ToLower();
                                     break;
                                 case "Nuln":
                                     Console.WriteLine("The city of soldiers. So tell me: are you a soldier?");
                                     Console.WriteLine("\r\n");
+                                    IfKnight = Console.ReadLine().ToLower();
                                     break;
                                 default:
                                     Console.WriteLine("The city of merchants. So tell me: are you a merchant?");
                                     Console.WriteLine("\r\n");
+                                    IfMerchant = Console.ReadLine().ToLower();
                                     break;
                             }
                             break;
@@ -100,21 +116,9 @@ namespace Sword_of_Dawn
                     Console.WriteLine("Where were you born?");
                     Console.WriteLine("Altdorf" + "\r\n" + "Averland" + "\r\n" + "Middenheim" + "\r\n" + "Mordheim" + "\r\n" + "Nuln" + "\r\n");
 
-                    string CityName = Console.ReadLine();
+                    string CityName = Console.ReadLine().ToLower();
 
                     ProfessionSwitch(CityName);
-
-                    //if-else statement for deciding player class. Takes input from Console.ReadLine() and converts it to string, then compares that string against predetermined results.
-                    string Profession = "";
-                    Profession = Console.ReadLine();
-                    if (Profession.ToLower() == "Yes")
-                    {
-                        Console.WriteLine("Excellent! Let's begin!");
-                    }
-                    else if (Profession.ToLower() == "No")
-                    {
-                        Console.WriteLine("Pick another one!");
-                    }
 
                 }
                 else if ((results.KeyChar == 'N') || (results.KeyChar == 'n'))
@@ -132,18 +136,7 @@ namespace Sword_of_Dawn
                     //Switch case for deciding player's place of birth//
 
                     ProfessionSwitch(CityName);
-                    //if-else statement for deciding player class. Takes input from Console.ReadLine().
-                    string Profession = "";
-                    Profession = Console.ReadLine();
                     
-                    if (Profession.ToLower() == "Yes")
-                    {
-                        Console.WriteLine("Excellent! Let's begin!");
-                    }
-                    else if (Profession.ToLower() == "No")
-                    {
-                        Console.WriteLine("Pick another one!");
-                    }
 
 
                 }
@@ -153,6 +146,26 @@ namespace Sword_of_Dawn
 
             public static void FirstSteps()
             {
+               //if (IfMerchant == "Yes")
+               // { }
+               //else if (IfMerchant == "No")
+               //   { }
+               //else if (IfFarmer == "Yes")
+               // { }
+               //else if (IfFarmer == "No")
+               // { }
+               // else if (IfKnight == "Yes")
+               // { }
+               // else if (IfKnight == "No")
+               // { }
+               // else if (IfAdventurer == "Yes")
+               // { }
+               // else if (IfAdventurer == "No")
+               // { }
+               // else if (IfSoldier == "Yes")
+               // { }
+               // else if (IfSoldier == "No")
+               // { }
                 
             }
 
